@@ -1,0 +1,316 @@
+  
+        body {
+            font-family: Calibri, sans-serif; /* Schriftart Calibri */
+            background-color: #eaf9ea; /* Hintergrundfarbe angepasst */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-strip {
+            background-color: #c3edc4; /* Obere grüne Farbe angepasst */
+            height: 20px;
+        }
+
+        header {
+            background-color: white;
+            color: #61B536; /* Farbe des Titels */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em; /* Größe des Titels erhöht */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 img {
+            height: 2em; /* Größe des Bildes erhöht */
+            margin-right: 10px; /* Abstand zwischen Bild und Text erhöht */
+        }
+
+        header h1 span {
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #d8f7d9; /* Navigationshintergrundfarbe angepasst */
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav .menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav .menu:hover .dropdown-content {
+            display: block;
+        }
+
+        nav .menu img {
+            height: 4.5em; /* Größe des Bildes im Dropdown-Menü erhöht */
+            vertical-align: middle; /* Ausrichtung des Bildes im Dropdown-Menü */
+            margin-right: 5px; /* Abstand zwischen Bild und Text im Dropdown-Menü */
+        }
+
+        nav .menu a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #d8f7d9; /* Dropdown-Hintergrundfarbe angepasst */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        nav .dropdown-content a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 16px 22px;
+            text-align: left;
+        }
+
+        nav .dropdown-content a:hover {
+            background-color: #a4d6a3; /* Dropdown-Hintergrundfarbe angepasst */
+            color: white;
+        }
+
+        .search-bar {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #388e3c;
+            width: 50%;
+            margin-left: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .home-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #c3edc4; /* Fußzeilenhintergrundfarbe angepasst */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #61B536;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            margin-right: 10px; /* Abstand zwischen den Buttons hinzugefügt */
+        }
+
+        .btn:hover {
+            background-color: #4CAF50;
+        }
+        
+ .recipe-card {
+    background-color: #fff;
+    border: 1px solid #ccc; /* Rahmen um die Karte */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.recipe-card img {
+    width: 40%; /* Breite des Bildes auf 40% setzen */
+    height: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.recipe-content {
+    padding: 15px;
+    width: 60%; /* Breite des Inhalts auf 60% setzen */
+}
+
+.recipe-content h2 {
+    margin: 0;
+    background-color: #61B536; /* Hintergrundfarbe des Titels */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.recipe-content p {
+    padding: 10px 0;
+}
+
+		.profile-pic {
+		    width: 4cm; /* Breite des Profilbildes auf 4 cm festlegen */
+		    height: 4cm; /* Höhe des Profilbildes auf 4 cm festlegen */
+		    border-radius: 50%; /* Runde Ecken für das Profilbild */
+		    margin-right: 20px; /* Abstand zwischen dem Profilbild und den persönlichen Details */
+		}
+
+		.personal-details {
+		    flex-grow: 1; /* Lässt den Text über die verbleibende Breite expandieren */
+		}
+		/* Deine bestehenden CSS-Regeln hier */
+
+		.profile-pic {
+		    width: 4cm; /* Breite des Profilbildes auf 4 cm festlegen */
+		    height: 4cm; /* Höhe des Profilbildes auf 4 cm festlegen */
+		    border-radius: 50%; /* Runde Ecken für das Profilbild */
+		    margin-right: 20px; /* Abstand zwischen dem Profilbild und den persönlichen Details */
+		}
+		
+		.personal-details {
+		    flex-grow: 1; /* Lässt den Text über die verbleibende Breite expandieren */
+		}
+		
+		.recipe-box {
+		    border: 2px solid #61B536; /* Rand des Rezeptkastens */
+		    padding: 20px; /* Innenabstand des Rezeptkastens */
+		    margin-top: 20px; /* Abstand zum Profilbild */
+		}
+		
+		.recipe-box h2 {
+		    color: #61B536; /* Farbe für den Titel der Rezepte */
+		    margin-top: 0; /* Oberen Abstand entfernen */
+		}
+		
+		.recipe-list {
+		    display: flex;
+		    flex-wrap: wrap;
+		}
+		
+		.recipe-item {
+		    width: 50%; /* Jede Reihe hat 2 Rezepte nebeneinander */
+		    display: flex;
+		    align-items: center;
+		    margin-bottom: 20px; /* Abstand zwischen den Rezepten */
+		}
+		
+		.recipe-img {
+		    width: 60px; /* Breite des Rezeptbildes */
+		    height: 60px; /* Höhe des Rezeptbildes */
+		    margin-right: 10px; /* Abstand zwischen Bild und Titel */
+		}
+		
+		.recipe-title {
+		    margin: 0; /* Absatzabstand entfernen */
+		}
+		
+		/* Deine bestehenden CSS-Regeln hier */
+
+		.profile-box {
+		    display: flex;
+		}
+		
+		.profile-info {
+		    margin-right: 20px;
+		}
+		
+		.recipe-box {
+		    border: 2px solid #61B536;
+		    padding: 20px;
+		    flex-grow: 1;
+		}
+		
+		.recipe-box h2 {
+		    color: #61B536;
+		    margin-top: 0;
+		}
+		
+		.recipe-list {
+		    padding: 0;
+		    list-style: none;
+		}
+		
+		.recipe-item {
+		    display: flex;
+		    align-items: center;
+		    margin-bottom: 20px;
+		}
+		
+		.recipe-img {
+		    width: 60px;
+		    height: 60px;
+		    margin-right: 10px;
+		}
+		
+		.recipe-title {
+		    margin: 0;
+		}
+		.recipe-list {
+            float: right; /* Positioniert den Abschnitt rechts neben der Profilbox */
+            width: 40%; /* Legt die Breite des Abschnitts fest */
+            padding: 20px; /* Fügt Innenabstand hinzu */
+        }
+
+           .recipe {
+            background-color: #fff; /* Hintergrundfarbe der Rezeptbox */
+            border-radius: 8px; /* Rundet die Ecken der Rezeptbox */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+            margin-bottom: 20px; /* Fügt Abstand zwischen den Rezepten hinzu */
+            padding: 10px; /* Fügt Innenabstand hinzu */
+        }
+
+        .recipe img {
+            width: 100%; /* Setzt die Breite des Rezeptbildes auf 100% */
+            border-top-left-radius: 8px; /* Rundet die Ecken des Bildes */
+            border-top-right-radius: 8px;
+        }
+
+        .recipe h3 {
+            margin-top: 0; /* Entfernt den oberen Abstand des Titels */
+        }
+        .container {
+            display: flex; /* Flexbox-Layout verwenden */
+            justify-content: center; /* Zentriert den Inhalt horizontal */
+            align-items: flex-start; /* Ausrichtung am oberen Rand */
+        }
+
+        .profile-box,
+        .recipe-list{
+            margin-top: 20px; /* Abstand zwischen Profilbox und Rezeptliste */
+        }
+
+        .recipe-list{
+            width: 40%; /* Legt die Breite der Rezeptliste fest */
+            margin-left: 20px; /* Abstand zwischen Profilbox und Rezeptliste */
+        }
+		
+		
+    
