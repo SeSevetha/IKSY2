@@ -141,6 +141,31 @@
         .btn:hover {
             background-color: #4CAF50;
         }
+
+        .user-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f8f8f8;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .logout-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .logout-btn:hover {
+            background-color: #ff1a1a;
+        }
+        
         
  .recipe-card {
     background-color: #fff;
@@ -312,5 +337,13 @@
             margin-left: 20px; /* Abstand zwischen Profilbox und Rezeptliste */
         }
 		
+        @media only screen and (max-width: 768px) {
+            .recipe-card {
+                width: calc(100% - 20px); /* Bei kleinen Bildschirmen, 100% Breite minus Abstand */
+            }
+        }
+
+        
+        
 		
     

@@ -30,12 +30,12 @@ class Sicherheit {
 		return false;
 	}      
 	
-	
-	static function isCorrectAnzahl($strMin, $strMax) {
-	    if (is_numeric($strMin) && is_numeric($strMax) && $strMin < $strMax) {
+	static function isCorrectJaNein($str) {
+	    if ($str == 'ja' || $str == 'Ja' || $str == 'nein' || $str=='Nein') {
 	        return true;
 	    }
 	    return false;
 	}
+	            	
 }
 ?>

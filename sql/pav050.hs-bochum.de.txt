@@ -1,5 +1,0 @@
-SQL-Datenbank
-PHPmyAdmin im Hochschulnetzwerk ODER per VPN erreichbar:
-http://pav050.hs-bochum.de/phpMyAdmin/
-MySQL Benutzer: wiInf
-Passwort: wiInf

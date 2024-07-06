@@ -1,12 +1,8 @@
 <!DOCTYPE html>
+<!--rezepte.html-->
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KochZauber - Rezepte</title>
-    <link rel="stylesheet" type="text/css" href="css/test.css"> <!-- Verweise auf die CSS-Datei -->
-
-<style>
+    <style>
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -25,6 +21,11 @@
             }
         }
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KochZauber - Rezepte</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <script src="js/holeRezeptZutaten.js" defer></script> 
 </head>
 <body>
     <div class="top-strip"></div>
@@ -50,14 +51,9 @@
         <div class="recipe-card">
             <img src="https://via.placeholder.com/400x400" alt="Rezeptbild">
             <div class="recipe-content">
-                <h2>Rezepttitel 1</h2>
+                <h2 id="recipe-title-1">Rezepttitel 1</h2>
                 <p>Zutaten:</p>
-                <ul>
-                    <li>Zutat 1</li>
-                    <li>Zutat 2</li>
-                    <li>Zutat 3</li>
-                    <!-- Weitere Zutaten hier hinzufügen -->
-                </ul>
+                <ul id="ingredients-list-1"></ul>
                 <p>Zubereitung:</p>
                 <p>Schritt-für-Schritt-Beschreibung des Rezepts.</p>
             </div>
@@ -66,14 +62,9 @@
         <div class="recipe-card">
             <img src="https://via.placeholder.com/400x400" alt="Rezeptbild">
             <div class="recipe-content">
-                <h2>Rezepttitel 2</h2>
+                <h2 id="recipe-title-2">Rezepttitel 2</h2>
                 <p>Zutaten:</p>
-                <ul>
-                    <li>Zutat A</li>
-                    <li>Zutat B</li>
-                    <li>Zutat C</li>
-                    <!-- Weitere Zutaten hier hinzufügen -->
-                </ul>
+                <ul id="ingredients-list-2"></ul>
                 <p>Zubereitung:</p>
                 <p>Schritt-für-Schritt-Beschreibung des zweiten Rezepts.</p>
             </div>
@@ -82,14 +73,9 @@
         <div class="recipe-card">
             <img src="https://via.placeholder.com/400x400" alt="Rezeptbild">
             <div class="recipe-content">
-                <h2>Rezepttitel 3</h2>
+                <h2 id="recipe-title-3">Rezepttitel 3</h2>
                 <p>Zutaten:</p>
-                <ul>
-                    <li>Zutat X</li>
-                    <li>Zutat Y</li>
-                    <li>Zutat Z</li>
-                    <!-- Weitere Zutaten hier hinzufügen -->
-                </ul>
+                <ul id="ingredients-list-3"></ul>
                 <p>Zubereitung:</p>
                 <p>Schritt-für-Schritt-Beschreibung des dritten Rezepts.</p>
             </div>
@@ -98,14 +84,9 @@
         <div class="recipe-card">
             <img src="https://via.placeholder.com/400x400" alt="Rezeptbild">
             <div class="recipe-content">
-                <h2>Rezepttitel 4</h2>
+                <h2 id="recipe-title-4">Rezepttitel 4</h2>
                 <p>Zutaten:</p>
-                <ul>
-                    <li>Zutat P</li>
-                    <li>Zutat Q</li>
-                    <li>Zutat R</li>
-                    <!-- Weitere Zutaten hier hinzufügen -->
-                </ul>
+                <ul id="ingredients-list-4"></ul>
                 <p>Zubereitung:</p>
                 <p>Schritt-für-Schritt-Beschreibung des vierten Rezepts.</p>
             </div>
