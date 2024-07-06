@@ -9,15 +9,10 @@ class User
         return DbFunctions::getFirstFieldOfResult($link, $query);
     }
 
-    /*
-    public static function holePasswortNeuVonBenutzernamen($link, $name)
-    {
-        $query = "select PasswortNeu
-                  from User
-                  where Username='$name'";
+    public static function holeVornameVonBenutzer($link, $name) {
+        $query = "SELECT vorname FROM Benutzer WHERE username = '$name'";
         return DbFunctions::getFirstFieldOfResult($link, $query);
     }
-    */
 
     public static function holeIDVonBenutzernamen($link, $name)
     {

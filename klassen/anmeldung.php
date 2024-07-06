@@ -35,14 +35,10 @@ if ($REQUEST_METHOD != "POST") {
     if ($gespeichertesPasswort && password_verify($passwort, $gespeichertesPasswort)) {
         // Passwort ist korrekt
         $userId = User::holeIDVonBenutzernamen($link, $name);
-
-        if ($userId !== null) {
-            $smarty->assign('userId', $userId);
-            // Hier könnten weitere Logiken für erfolgreiche Anmeldung erfolgen
-            // Zum Beispiel: Setzen von Session-Variablen oder Weiterleitung
-        } else {
-            $smarty->assign('keineAnmeldung', true);
-        }
+        $vorname = User::holeVornameVonBenutzer($link, $name);
+        $smarty->assign('userId', $userId);
+        $smarty->assign('vorname', $vorname);
+        
     } else {
         // Falsches Passwort oder Benutzer existiert nicht
         $smarty->assign('keineAnmeldung', true);

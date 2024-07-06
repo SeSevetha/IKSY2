@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.0, created on 2024-07-02 13:06:04
+/* Smarty version 4.2.0, created on 2024-07-03 15:22:50
   from '/var/www/html/iksy05/Projekt10/smarty/templates/neuesRezept.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.0',
-  'unifunc' => 'content_6683df1c29c566_08102008',
+  'unifunc' => 'content_668550aa06a255_61910679',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '66b2815dd100b532cc5c86f1fb9c11db7f64ef58' => 
     array (
       0 => '/var/www/html/iksy05/Projekt10/smarty/templates/neuesRezept.tpl',
-      1 => 1719918359,
+      1 => 1720009619,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6683df1c29c566_08102008 (Smarty_Internal_Template $_smarty_tpl) {
+function content_668550aa06a255_61910679 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!-- neuesRezept.tpl -->
 <html lang="de">
@@ -42,9 +42,9 @@ function content_6683df1c29c566_08102008 (Smarty_Internal_Template $_smarty_tpl)
         <div class="menu">
             <img src="/home/iksy/Bilder/menue.png" alt="Menü">
             <div class="dropdown-content">
-                <a href="test.html">Home</a>
-                <a href="rezepte.html">Rezepte</a>
-                <a href="meine.html">Konto</a>
+                <a href="../test.html">Home</a>
+                <a href="../rezepte.html">Rezepte</a>
+                <a href="../meine.html">Konto</a>
                 <a href="#">Kontakt</a>
             </div>
         </div>
@@ -74,10 +74,12 @@ function content_6683df1c29c566_08102008 (Smarty_Internal_Template $_smarty_tpl)
             <label for="recipeName">Rezeptname</label>
             <input type="text" class="form-control" id="recipeName" name="recipeName" required>
         </div>
+        <!--
           <div class="form-group">
             <label for="ingredients">Zutaten</label>
             <input type="text" class="form-control" id="ingredients" name="ingredients" >
         </div>
+        -->
         <div class="form-group">
             <label for="description">Beschreibung</label>
             <textarea class="form-control" id="description" name="description"></textarea>

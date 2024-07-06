@@ -27,7 +27,7 @@
     </div>
     <script type="text/javascript">
         setTimeout(function() {
-            window.location.href = "../test.html";
+            window.location.href = "../index.html";
         }, 3000); // 3 Sekunden Verzögerung
     </script>
 </body>

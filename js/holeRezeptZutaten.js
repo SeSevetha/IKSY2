@@ -1,6 +1,13 @@
-// holeRezeptZutaten.js
-
+//holeRezeptZutaten.js
 document.addEventListener('DOMContentLoaded', function() {
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    
+    recipeCards.forEach((card, index) => {
+        const recipeId = index + 1;
+        holeRezeptName(recipeId);
+        holeZutaten(recipeId);
+    });
+
     function holeRezeptName(id) {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -24,13 +31,4 @@ document.addEventListener('DOMContentLoaded', function() {
         xhttp.open("GET", "klassen/Abfragen.php?type=ingredients&id=" + id, true);
         xhttp.send();
     }
-
-    holeRezeptName(1);
-    holeZutaten(1);
-    holeRezeptName(2);
-    holeZutaten(2);
-    holeRezeptName(3);
-    holeZutaten(3);
-    holeRezeptName(4);
-    holeZutaten(4);
 });

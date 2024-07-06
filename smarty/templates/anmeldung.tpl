@@ -18,7 +18,7 @@
         <div class="menu">
             <img src="/home/iksy/Bilder/menue.png" alt="Menü">
             <div class="dropdown-content">
-                <a href="../test.html">Home</a>
+                <a href="../index.html">Home</a>
                 <a href="../rezepte.html">Rezepte</a>
                 <a href="../meine.html">Konto</a>
                 <a href="#">Kontakt</a>
@@ -44,8 +44,8 @@
         {if isset($keineAnmeldung)}
             Benutzername und Passwort stimmen nicht überein
         {else}
-            Sie sind angemeldet. Ihre UserId ist: {$userId}.				
-		{/if} 
+            Sie sind angemeldet. Hallo {$vorname} , schön das du wieder da bist.
+        {/if}
     {/if}
     <div class="footer">
         &copy; 2024 KochZauber. Alle Rechte vorbehalten.

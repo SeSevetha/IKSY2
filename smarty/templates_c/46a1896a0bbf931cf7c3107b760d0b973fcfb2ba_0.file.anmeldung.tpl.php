@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.0, created on 2024-07-02 11:33:49
+/* Smarty version 4.2.0, created on 2024-07-03 16:10:21
   from '/var/www/html/iksy05/Projekt10/smarty/templates/anmeldung.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.0',
-  'unifunc' => 'content_6683c97d5fd982_56233292',
+  'unifunc' => 'content_66855bcdd42547_16829691',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46a1896a0bbf931cf7c3107b760d0b973fcfb2ba' => 
     array (
       0 => '/var/www/html/iksy05/Projekt10/smarty/templates/anmeldung.tpl',
-      1 => 1719831014,
+      1 => 1720015820,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6683c97d5fd982_56233292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66855bcdd42547_16829691 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -41,7 +41,7 @@ function content_6683c97d5fd982_56233292 (Smarty_Internal_Template $_smarty_tpl)
         <div class="menu">
             <img src="/home/iksy/Bilder/menue.png" alt="Menü">
             <div class="dropdown-content">
-                <a href="../test.html">Home</a>
+                <a href="../index.html">Home</a>
                 <a href="../rezepte.html">Rezepte</a>
                 <a href="../meine.html">Konto</a>
                 <a href="#">Kontakt</a>
