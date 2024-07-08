@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
+<!-- index.tpl -->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KochZauber</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
+</head>
 <body>
     <div class="top-strip"></div>
     <header>
@@ -14,17 +15,19 @@
             <span style="color: #61B536;">K</span>och<span style="color: #61B536;">Z</span>auber
         </h1>
         <div class="user-info">
-            <form action="klassen/logout.php" method="post" style="display:inline;">
-                <button type="submit" class="logout-btn">Logout</button>
-            </form>
+            {if $isLoggedIn}
+                <form action="klassen/logout.php" method="post" style="display:inline;">
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+            {/if}
         </div>
     </header>
     <nav>
         <div class="menu">
             <img src="./Bilder/menue.png" alt="Menü">
             <div class="dropdown-content">
-                <a href="index.html">Home</a>
-                <a href="klassen/rezepte.php">Rezepte</a>
+                <a href="./index.php">Home</a>
+                <a href="./klassen/rezepte.php">Rezepte</a>
                 <a href="meine.html">Konto</a>
                 <a href="#">Kontakt</a>
             </div>

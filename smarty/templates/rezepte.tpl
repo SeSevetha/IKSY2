@@ -38,8 +38,8 @@
         <div class="menu">
             <img src="/home/iksy/Bilder/menue.png" alt="Menü">
             <div class="dropdown-content">
-                <a href="../index.html">Home</a>
-                <a href="../rezepte.html">Rezepte</a>
+                <a href="../index.php">Home</a>
+                <a href="./rezepte.php">Rezepte</a>
                 <a href="../meine.html">Konto</a>
                 <a href="#">Kontakt</a>
             </div>

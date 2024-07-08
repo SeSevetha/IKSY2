@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.0, created on 2024-07-08 14:02:38
+  from 'E:\Studium\HS-Bochum Studium\8. SS 24\IKSY2\Projekt\IKSY2\smarty\templates\neuesRezept.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.0',
+  'unifunc' => 'content_668bd55e1cbd93_64684410',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '56cc32998016603938efd3bfa98890bb05640685' => 
+    array (
+      0 => 'E:\\Studium\\HS-Bochum Studium\\8. SS 24\\IKSY2\\Projekt\\IKSY2\\smarty\\templates\\neuesRezept.tpl',
+      1 => 1720440155,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_668bd55e1cbd93_64684410 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <!-- neuesRezept.tpl -->
 <html lang="de">
 <head>
@@ -30,13 +53,15 @@
     <div class="container">
         <div class="form-container">
             <h2>Neues Rezept erstellen</h2>
-            {if $logged_in}
-    {if isset($success_message)}
-        <div class="alert alert-success">{$success_message}</div>
-    {/if}
-    {if isset($error_message)}
-        <div class="alert alert-danger">{$error_message}</div>
-    {/if}
+            <?php if ($_smarty_tpl->tpl_vars['logged_in']->value) {?>
+    <?php if ((isset($_smarty_tpl->tpl_vars['success_message']->value))) {?>
+        <div class="alert alert-success"><?php echo $_smarty_tpl->tpl_vars['success_message']->value;?>
+</div>
+    <?php }?>
+    <?php if ((isset($_smarty_tpl->tpl_vars['error_message']->value))) {?>
+        <div class="alert alert-danger"><?php echo $_smarty_tpl->tpl_vars['error_message']->value;?>
+</div>
+    <?php }?>
 
 		<form method="post" action="neuesRezept.php">
         <label for="benutzername">Benutzername:</label><br>
@@ -67,7 +92,8 @@
         
         <button type="submit">Rezept speichern</button>
     </form>
-    <script>
+    <?php echo '<script'; ?>
+>
         function addIngredientRow() {
             var container = document.getElementById('ingredientContainer');
             var row = document.createElement('div');
@@ -91,11 +117,12 @@
             var container = row.parentNode;
             container.removeChild(row);
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 
-{else}
+<?php } else { ?>
     <p>Sie sind nicht eingeloggt. Bitte <a href="../klassen/anmeldung.php">melden Sie sich an</a>.</p>
-{/if}
+<?php }?>
         </div>
     </div>
     <div class="footer">
@@ -103,3 +130,5 @@
     </div>
 </body>
 </html>
+<?php }
+}

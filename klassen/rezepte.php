@@ -1,6 +1,6 @@
 <?php
 require_once('../includes/startTemplate.inc.php'); 
-require_once('DbFunctions.inc.php');
+require_once('../klassen/DbFunctions.inc.php'); // Pfad zu DbFunctions.inc.php angepasst
 
 // Funktion, um alle Rezepte und ihre Zutaten aus der Datenbank zu holen
 function holeRezepteMitZutaten() {

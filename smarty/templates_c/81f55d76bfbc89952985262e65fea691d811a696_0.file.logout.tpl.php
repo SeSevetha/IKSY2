@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.0, created on 2024-07-08 14:09:58
+  from 'E:\Studium\HS-Bochum Studium\8. SS 24\IKSY2\Projekt\IKSY2\smarty\templates\logout.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.0',
+  'unifunc' => 'content_668bd716bb3cb4_09026832',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '81f55d76bfbc89952985262e65fea691d811a696' => 
+    array (
+      0 => 'E:\\Studium\\HS-Bochum Studium\\8. SS 24\\IKSY2\\Projekt\\IKSY2\\smarty\\templates\\logout.tpl',
+      1 => 1720440589,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_668bd716bb3cb4_09026832 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +48,14 @@
         Sie werden in wenigen Sekunden zur Startseite weitergeleitet.
         </h2>
     </div>
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ type="text/javascript">
         setTimeout(function() {
             window.location.href = "../index.php";
         }, 3000); // 3 Sekunden Verzögerung
-    </script>
+    <?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}
