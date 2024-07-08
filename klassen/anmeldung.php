@@ -8,22 +8,19 @@ $PHP_SELF = $_SERVER['PHP_SELF'];
 $REQUEST_METHOD = $_SERVER['REQUEST_METHOD'];
 
 if ($REQUEST_METHOD != "POST") {
-    //hier was eingefügt
     if(!isset($_SESSION["csrfToken"]))
     {
         $_SESSION["csrfToken"] = bin2hex(random_bytes(64));
     }
     $smarty->assign ( 'csrfToken', $_SESSION["csrfToken"]);
-    //hier ende
+
     $smarty->assign('PHP_SELF', $PHP_SELF);
 } else {
-    //hier was eingefügt
     if(!isset($_POST["csrfToken"])||!isset($_SESSION["csrfToken"])||$_POST["csrfToken"] != $_SESSION["csrfToken"])
     {
         unset($_SESSION["csrfToken"]);
         die("CSRF Token ungültig!");
     }
-    //hier ende
     
     $link = DbFunctions::connectWithDatabase();
     $name = DbFunctions::escape($link, trim($_POST['name']));

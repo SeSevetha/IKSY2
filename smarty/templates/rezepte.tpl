@@ -25,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KochZauber - Rezepte</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css"> 
-    <!-- <script src="../js/holeRezeptZutaten.js" defer></script> -->
 </head>
 <body>
     <div class="top-strip"></div>
@@ -52,9 +51,13 @@
         <div class="recipe-card">
             <img src="{$recipe.image_url|default:'https://via.placeholder.com/400x400'}" alt="Rezeptbild">
             <div class="recipe-content">
-                <h2 id="recipe-title-{$recipe.id}">{$recipe.name}</h2>
+                <h2>{$recipe.name}</h2>
                 <p>Zutaten:</p>
-                <ul id="ingredients-list-{$recipe.id}"></ul>
+                <ul>
+                    {foreach from=$recipe.zutaten item=zutat}
+                    <li>{$zutat}</li>
+                    {/foreach}
+                </ul>
                 <p>Zubereitung:</p>
                 <p>{$recipe.beschreibung}</p>
             </div>
