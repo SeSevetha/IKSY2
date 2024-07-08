@@ -14,3 +14,5 @@ $smarty->assign('isLoggedIn', $isLoggedIn);
 // Template anzeigen
 $smarty->display('smarty/templates/index.tpl');
 ?>
+
+
