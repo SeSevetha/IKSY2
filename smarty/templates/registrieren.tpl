@@ -11,7 +11,7 @@
     <div class="top-strip"></div>
     <header>
         <h1>
-            <img src="/home/iksy/Bilder/zauber.jpg" alt="KochZauber">
+            <img src="../Bilder/zauber.jpg" alt="KochZauber">
             <span style="color: #61B536;">K</span>och<span style="color: #61B536;">Z</span>auber
         </h1>
     </header>
@@ -29,7 +29,7 @@
     </nav>
     <div class="container">
         <div class="home-content">
-            <img src="/home/iksy/Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
+            <img src="../Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
             <h2>Registrierung</h2>
             <form method="POST" action="registrieren.php">
                 <input type="hidden" name="csrfToken" value="{$csrfToken}">

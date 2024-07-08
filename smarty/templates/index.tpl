@@ -36,7 +36,7 @@
     </nav>
     <div class="container">
         <div class="home-content">
-            <img src="/home/iksy/Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
+            <img src="./Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
             <h2>Willkommen bei KochZauber</h2>
             <p>Entdecken Sie köstliche Rezepte und kulinarische Inspirationen, die Ihre Kochkünste verzaubern werden!
                 Oder aber Teilen Sie selber Ihre kulinarischen Inspirationen mit der Community!
