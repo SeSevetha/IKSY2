@@ -18,4 +18,5 @@ $smarty->setCompileDir(__DIR__ . '/../smarty/templates_c/');
 $smarty->setConfigDir(__DIR__ . '/../smarty/configs/');
 $smarty->setCacheDir(__DIR__ . '/../smarty/cache/');
 
+
 ?>
