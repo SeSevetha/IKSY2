@@ -58,18 +58,32 @@ function fuegeRezepteEin($link, $rezeptname, $user_id, $beschreibung) {
     
 function fuegeZutatEin($link, $zutaten, $einheiten) {
     $zutaten_ids = [];
-    $stmt = $link->prepare("INSERT INTO Zutat (zutatname, einheitid) VALUES (?, ?)");
+    $stmtInsert = $link->prepare("INSERT INTO Zutat (zutatname, einheitid) VALUES (?, ?)");
+    $stmtSelect = $link->prepare("SELECT id FROM Zutat WHERE zutatname = ? AND einheitid = ?");
     
     for ($i = 0; $i < count($zutaten); $i++) {
         $zutatname = $zutaten[$i];
         $einheitid = $einheiten[$i];
         
-        $stmt->bind_param("si", $zutatname, $einheitid);
-        $stmt->execute();
-        $zutaten_ids[] = $stmt->insert_id;
+        // Prüfen, ob die Zutat bereits existiert
+        $stmtSelect->bind_param("si", $zutatname, $einheitid);
+        $stmtSelect->execute();
+        $stmtSelect->store_result();
+        
+        if ($stmtSelect->num_rows > 0) {
+            $stmtSelect->bind_result($id);
+            $stmtSelect->fetch();
+            $zutaten_ids[] = $id;
+        } else {
+            // Wenn die Zutat nicht existiert, füge sie ein
+            $stmtInsert->bind_param("si", $zutatname, $einheitid);
+            $stmtInsert->execute();
+            $zutaten_ids[] = $stmtInsert->insert_id;
+        }
     }
     
-    $stmt->close();
+    $stmtInsert->close();
+    $stmtSelect->close();
     return $zutaten_ids;
 }
 
@@ -83,7 +97,8 @@ function fuegeRezeptZutatEin($link, $rezeptid, $zutaten_ids, $mengen) {
         $stmt->bind_param("iid", $rezeptid, $zutatid, $menge);
         $stmt->execute();
     }
-
+    
+    $stmt->close();
 }
 
 ?>
