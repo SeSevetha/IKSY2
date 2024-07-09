@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.0, created on 2024-07-09 15:28:35
+  from '/var/www/html/iksy05/IKSY2/smarty/templates/registrieren.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.0',
+  'unifunc' => 'content_668d3b0393a178_96846206',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '317a03638ced2767fba26103f7b8a733ed648cd0' => 
+    array (
+      0 => '/var/www/html/iksy05/IKSY2/smarty/templates/registrieren.tpl',
+      1 => 1720531458,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_668d3b0393a178_96846206 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <!--registrieren.tpl-->
 <html lang="de">
 <head>
@@ -32,7 +55,8 @@
             <img src="../Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
             <h2>Registrierung</h2>
             <form method="POST" action="registrieren.php">
-                <input type="hidden" name="csrfToken" value="{$csrfToken}">
+                <input type="hidden" name="csrfToken" value="<?php echo $_smarty_tpl->tpl_vars['csrfToken']->value;?>
+">
                 <label for="username">Benutzername:</label>
                 <input type="text" id="username" name="username" required>
                 <br>
@@ -58,8 +82,16 @@
     <div class="footer">
         &copy; 2024 KochZauber. Alle Rechte vorbehalten.
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.0, created on 2024-07-09 15:32:09
+  from '/var/www/html/iksy05/KochZauber/smarty/templates/anmeldung.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.0',
+  'unifunc' => 'content_668d3bd9cab856_97917687',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ff5d9b303c65ccf9b69ebc327129592f04a520d6' => 
+    array (
+      0 => '/var/www/html/iksy05/KochZauber/smarty/templates/anmeldung.tpl',
+      1 => 1720531410,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_668d3bd9cab856_97917687 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -59,28 +82,39 @@
         </div>
     </div>
     <div class="center-form">
-        {if !$isLoggedIn}
-            <form name='anmeldung' action='{$PHP_SELF}' method='post'>
-                <input type="hidden" name="csrfToken" value="{$csrfToken}" />
+        <?php if (!$_smarty_tpl->tpl_vars['isLoggedIn']->value) {?>
+            <form name='anmeldung' action='<?php echo $_smarty_tpl->tpl_vars['PHP_SELF']->value;?>
+' method='post'>
+                <input type="hidden" name="csrfToken" value="<?php echo $_smarty_tpl->tpl_vars['csrfToken']->value;?>
+" />
                 <label for="i_name">Name</label>
                 <input type="text" name="name" id="i_name" size=12><br>
                 <label for="i_password">Passwort</label>
                 <input type="password" name="password" id="i_password" size=12><br>
                 <input type="submit" name="Button1" value="Abschicken">
             </form>
-            {if isset($keineAnmeldung)}
+            <?php if ((isset($_smarty_tpl->tpl_vars['keineAnmeldung']->value))) {?>
                 <p>Benutzername und Passwort stimmen nicht �berein</p>
-            {/if}
-        {else}
-            <p>Sie sind angemeldet. Hallo {$user.vorname}, sch�n dass du wieder da bist.</p>
-        {/if}
+            <?php }?>
+        <?php } else { ?>
+            <p>Sie sind angemeldet. Hallo <?php echo $_smarty_tpl->tpl_vars['user']->value['vorname'];?>
+, sch�n dass du wieder da bist.</p>
+        <?php }?>
     </div>
     <div class="footer">
         &copy; 2024 KochZauber. Alle Rechte vorbehalten.
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
     
 </body>
 </html>
+<?php }
+}

@@ -32,9 +32,9 @@ class User
         mysqli_stmt_bind_param($stmt, 'ssssss', $username, $passwortHash, $email, $vorname, $nachname, $token);
         mysqli_stmt_execute($stmt);
         if (mysqli_stmt_affected_rows($stmt) == 1) {
-            echo "Benutzer wurde erfolgreich eingefügt.";
+            echo "Benutzer wurde erfolgreich eingefï¿½gt.";
         } else {
-            echo "Fehler beim Einfügen des Benutzers.";
+            echo "Fehler beim Einfï¿½gen des Benutzers.";
         }
         mysqli_stmt_close($stmt);
     }

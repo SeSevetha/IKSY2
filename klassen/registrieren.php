@@ -5,14 +5,14 @@ require_once('../klassen/User.inc.php');
 
 session_start(); // Start the session
 
-// Check if the user is logged in
+// Check if the user is not logged in
 if (!isset($_SESSION['userId'])) {
-    // If not logged in, allow registration form to be displayed
-    $PHP_SELF = $_SERVER['PHP_SELF'];
+    // Allow registration form to be displayed
+    $PHP_SELF = htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8');
     $REQUEST_METHOD = $_SERVER['REQUEST_METHOD'];
 
     // Handle CSRF token
-    if ($REQUEST_METHOD != "POST") {
+    if ($REQUEST_METHOD !== "POST") {
         if (!isset($_SESSION["csrfToken"])) {
             $csrfToken = bin2hex(random_bytes(32)); // Reduced to 32 bytes for efficiency
             $_SESSION["csrfToken"] = $csrfToken;
@@ -22,11 +22,6 @@ if (!isset($_SESSION['userId'])) {
         $smarty->assign('csrfToken', $csrfToken);
         $smarty->assign('PHP_SELF', $PHP_SELF);
     } else {
-        if (!isset($_POST["csrfToken"]) || !hash_equals($_SESSION["csrfToken"], $_POST["csrfToken"])) {
-            unset($_SESSION["csrfToken"]);
-            die("CSRF Token ungültig!");
-        }
-
         // Process registration form
         $link = DbFunctions::connectWithDatabase();
 
@@ -38,6 +33,27 @@ if (!isset($_SESSION['userId'])) {
         $nachname = DbFunctions::escape($link, trim($_POST['nachname']));
         $token = bin2hex(random_bytes(16)); // Generate a random token
 
+        function isEmailUnique($email) {
+    $link = DbFunctions::connectWithDatabase();
+    $escapedEmail = DbFunctions::escape($link, $email);
+
+    $query = "SELECT COUNT(*) FROM Benutzer WHERE email = '$escapedEmail'";
+    $count = DbFunctions::getFirstFieldOfResult($link, $query);
+
+    mysqli_close($link);
+
+    return $count == 0; // True, wenn die E-Mail-Adresse noch nicht existiert
+}
+
+        // Check if email is unique
+        if (!isEmailUnique($email)) {
+            echo "<script>alert('Die angegebene E-Mail-Adresse ist bereits registriert. Bitte verwenden Sie eine andere E-Mail-Adresse.');</script>";
+            echo "<script>setTimeout(function() {
+                window.location.href = 'registrieren.php';
+            }, 100); // 1 Sekunden Verzögerung</script>";
+            exit; // Stop further execution
+        }
+        
         if ($password === $password_repeat) {
             // Check if username already exists
             $query = "SELECT COUNT(*) FROM Benutzer WHERE username = '$username'";
@@ -47,18 +63,21 @@ if (!isset($_SESSION['userId'])) {
                 // Insert user (consider hashing the password)
                 User::fuegeEin($link, $username, $password, $email, $vorname, $nachname, $token);
                 echo "<script>alert('Benutzer erfolgreich registriert');</script>";
+                echo "<script>setTimeout(function() {
+                    window.location.href = 'anmeldung.php';
+                }, 100); // 1 Sekunden Verzögerung</script>";
+                exit();
             } else {
                 echo "<script>alert('Benutzername bereits vergeben');</script>";
             }
         } else {
-            echo "<script>alert('Passw�rter stimmen nicht �berein');</script>";
+            echo "<script>alert('Passwörter stimmen nicht überein');</script>";
         }
 
         unset($_SESSION["csrfToken"]);
         mysqli_close($link);
     }
 
-    // Display registration form template
     $smarty->display('../smarty/templates/registrieren.tpl');
     exit; // Exit script after displaying registration form
 }

@@ -24,6 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KochZauber - Rezepte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/style.css"> 
 </head>
 <body>
@@ -41,10 +42,14 @@
                 <a href="../index.php">Home</a>
                 <a href="./rezepte.php">Rezepte</a>
                 <a href="./meine.php">Konto</a>
-                <a href="#">Kontakt</a>
+
             </div>
         </div>
-        <input type="text" class="search-bar" placeholder="z.B. Lasagne, Sommersalat, Nudeln">
+        <!-- Suchformular hinzufügen -->
+        <form action="./rezepte.php" method="get">
+            <input type="text" name="search" class="search-bar" placeholder="z.B. Lasagne, Sommersalat, Nudeln">
+            <button type="submit">Suchen</button>
+        </form>
     </nav>
     <div class="container">
         {foreach from=$recipes item=recipe}
@@ -68,5 +73,8 @@
     <div class="footer">
         &copy; 2024 KochZauber. Alle Rechte vorbehalten.
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
