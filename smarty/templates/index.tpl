@@ -24,7 +24,7 @@
     </header>
     <nav>
         <div class="menu">
-            <img src="./Bilder/menue.webp" alt="Men√º">
+            <img src="./Bilder/menue.webp" alt="Men¸">
             <div class="dropdown-content">
                 <a href="./index.php">Home</a>
                 <a href="./klassen/rezepte.php">Rezepte</a>
@@ -36,13 +36,15 @@
     </nav>
     <div class="container">
         <div class="home-content">
-            <img src="./Bilder/start.jpg" alt="Begr√º√üungsbild" style="border-radius: 8px;">
+            <img src="./Bilder/start.jpg" alt="Begr¸ﬂungsbild" style="border-radius: 8px;">
             <h2>Willkommen bei KochZauber</h2>
-            <p>Entdecken Sie k√∂stliche Rezepte und kulinarische Inspirationen, die Ihre Kochk√ºnste verzaubern werden!
+            <p>Entdecken Sie koestliche Rezepte und kulinarische Inspirationen, die Ihre Kochkuenste verzaubern werden!
                 Oder aber Teilen Sie selber Ihre kulinarischen Inspirationen mit der Community!
             </p>
-            <a href="klassen/anmeldung.php" class="btn">Anmelden</a>
-            <a href="klassen/registrieren.php" class="btn">Registrieren</a>
+            {if !$isLoggedIn}
+                <a href="klassen/anmeldung.php" class="btn">Anmelden</a>
+                <a href="klassen/registrieren.php" class="btn">Registrieren</a>
+            {/if}
             <a href="klassen/neuesRezept.php" class="btn">Neues Rezept</a>
         </div>
     </div>
@@ -51,4 +53,3 @@
     </div>
 </body>
 </html>
-

@@ -1,10 +1,10 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
+session_unset(); // Alle Session-Variablen löschen
+session_destroy(); // Session zerstören
 
-require_once('../includes/startTemplate.inc.php'); 
-
-$smarty->display('../smarty/templates/logout.tpl');
+// Benutzer zur Startseite weiterleiten
+header("Location: ../index.php");
 exit();
 ?>
+
