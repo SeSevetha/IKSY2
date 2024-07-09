@@ -21,7 +21,7 @@
             <div class="dropdown-content">
                 <a href="../index.php">Home</a>
                 <a href="./rezepte.php">Rezepte</a>
-                <a href="meine.html">Konto</a>
+                <a href="./meine.php">Konto</a>
                 <a href="#">Kontakt</a>
             </div>
         </div>
