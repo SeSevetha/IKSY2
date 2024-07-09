@@ -51,7 +51,7 @@ if (!isset($_SESSION['userId'])) {
                 echo "<script>alert('Benutzername bereits vergeben');</script>";
             }
         } else {
-            echo "<script>alert('PasswÃ¶rter stimmen nicht Ã¼berein');</script>";
+            echo "<script>alert('Passwörter stimmen nicht Überein');</script>";
         }
 
         unset($_SESSION["csrfToken"]);

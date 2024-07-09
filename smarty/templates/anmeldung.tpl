@@ -44,11 +44,11 @@
     </header>
     <nav>
         <div class="menu">
-            <img src="/home/iksy/Bilder/menue.png" alt="Menü">
+            <img src="../Bilder/menue.webp" alt="Menü">
             <div class="dropdown-content">
                 <a href="../index.php">Home</a>
                 <a href="./rezepte.php">Rezepte</a>
-                <a href="../meine.html">Konto</a>
+                <a href="../meine.php">Konto</a>
                 <a href="#">Kontakt</a>
             </div>
         </div>
@@ -56,11 +56,11 @@
     </nav>
     <div class="container">
         <div class="home-content">
-             <img src="../Bilder/start.jpg" alt="BegrÃ¼ÃŸungsbild" style="border-radius: 8px;">
+             <img src="../Bilder/start.jpg" alt="Begrüßungsbild" style="border-radius: 8px;">
         </div>
     </div>
     <div class="center-form">
-        {if isset($PHP_SELF)}
+        {if !$isLoggedIn}
             <form name='anmeldung' action='{$PHP_SELF}' method='post'>
                 <input type="hidden" name="csrfToken" value="{$csrfToken}" />
                 <label for="i_name">Name</label>
@@ -69,12 +69,11 @@
                 <input type="password" name="password" id="i_password" size=12><br>
                 <input type="submit" name="Button1" value="Abschicken">
             </form>
-        {else}
             {if isset($keineAnmeldung)}
-                Benutzername und Passwort stimmen nicht überein
-            {else}
-                Sie sind angemeldet. Hallo {$vorname}, schön dass du wieder da bist.
+                <p>Benutzername und Passwort stimmen nicht überein</p>
             {/if}
+        {else}
+            <p>Sie sind angemeldet. Hallo {$user.vorname}, schön dass du wieder da bist.</p>
         {/if}
     </div>
     <div class="footer">

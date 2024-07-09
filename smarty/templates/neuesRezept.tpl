@@ -17,7 +17,7 @@
     </header>
     <nav>
         <div class="menu">
-            <img src="/home/iksy/Bilder/menue.png" alt="Menü">
+            <img src="../Bilder/menue.webp" alt="Menü">
             <div class="dropdown-content">
                 <a href="../index.php">Home</a>
                 <a href="./rezepte.php">Rezepte</a>

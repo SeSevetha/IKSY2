@@ -24,11 +24,11 @@
     </header>
     <nav>
         <div class="menu">
-            <img src="./Bilder/menue.png" alt="Menü">
+            <img src="./Bilder/menue.webp" alt="Menü">
             <div class="dropdown-content">
                 <a href="./index.php">Home</a>
                 <a href="./klassen/rezepte.php">Rezepte</a>
-                <a href="meine.html">Konto</a>
+                <a href="./klassen/meine.php">Konto</a>
                 <a href="#">Kontakt</a>
             </div>
         </div>
